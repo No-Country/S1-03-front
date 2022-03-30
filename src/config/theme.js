@@ -3,8 +3,22 @@ const config = {
     mobile: 576,
     tablet: 768,
     desktop: 1200,
-    desktop_lg: 1400,
+    desktop_lg: 1400
   },
-};
+  palette: {
+    black: '#1C1C1C',
+    dark: '#323232',
+    darkGray: '#47484A',
+    gray: '#AEACAC',
+    lightGray: '#E8E4E4',
+    greenBlueGradient:
+      'linear-gradient(118.09deg, #5EA251 -14.47%, #3D81B3 115.8%)',
+    blue: '#549BCB',
+    green: '#76B26B',
+    lightBluedWhite: '#ECF0F1',
+    white: '#FCFCFC',
+    red: '#FF7354'
+  }
+}
 
-export default config;
+export default config
