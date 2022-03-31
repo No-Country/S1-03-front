@@ -10,7 +10,8 @@ export const palette = {
   dark: '#323232',
   darkGray: '#47484A',
   gray: '#AEACAC',
-  lightGray: '#E8E4E4',
+  lightGray: '#A0A0A0',
+  lighterGray: '#E8E4E4',
   greenBlueGradient:
     'linear-gradient(118.09deg, #5EA251 -14.47%, #3D81B3 115.8%)',
   blue: '#549BCB',
@@ -23,9 +24,17 @@ export const palette = {
 
 export const theme = {
   dark: {
-    background: palette.bluedDark
+    background: palette.bluedDark,
+    modalBg: palette.white,
+    primary: palette.blue,
+    secondary: palette.green
   },
   light: {
-    background: palette.lightBluedWhite
+    background: palette.lightBluedWhite,
+    modalBg: palette.white,
+    primary: palette.green,
+    secondary: palette.blue,
+    inputBg: palette.lighterGray,
+    inputPlaceholder: palette.lightGray
   }
 }
