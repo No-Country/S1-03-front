@@ -36,5 +36,6 @@ export const theme = {
     secondary: palette.blue,
     inputBg: palette.lighterGray,
     inputPlaceholder: palette.lightGray
-  }
+  },
+  fonts: ['Poppins', 'sans-serif']
 }
