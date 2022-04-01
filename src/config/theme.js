@@ -25,7 +25,7 @@ export const palette = {
 export const theme = {
   dark: {
     background: palette.bluedDark,
-    modalBg: palette.white,
+    modalBg: palette.dark,
     primary: palette.blue,
     secondary: palette.green
   },
