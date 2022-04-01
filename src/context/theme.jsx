@@ -16,7 +16,13 @@ const Theme = ({ children }) => {
   }, [darkmode])
 
   return (
-    <ThemeProvider theme={{ ...currentTheme, changeTheme, fonts: theme.fonts }}>
+    <ThemeProvider
+      theme={{
+        ...currentTheme,
+        changeTheme,
+        fonts: theme.fonts,
+        darkmode
+      }}>
       {children}
     </ThemeProvider>
   )
