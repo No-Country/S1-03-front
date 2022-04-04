@@ -24,12 +24,15 @@ export const palette = {
 
 export const theme = {
   dark: {
+    white: palette.white,
     background: palette.bluedDark,
     modalBg: palette.dark,
     primary: palette.blue,
     secondary: palette.green
   },
   light: {
+    text: palette.dark,
+    white: palette.white,
     background: palette.lightBluedWhite,
     modalBg: palette.white,
     primary: palette.green,
