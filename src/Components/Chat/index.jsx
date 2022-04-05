@@ -1,36 +1,29 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 
-import ChatMessage from './ChatMessage'
 import { messages } from '../../Utils/chatData'
 import ChatInput from './ChatInput'
+import ChatContainer from './ChatContainer'
 import TopBar from './TopBar'
-
-const ChatContainer = styled.div`
-  height: 100%;
-  margin: auto;
-  background-color: #ddf;
-  padding: 1rem;
-`
+import Container from '../Container'
 
 const Chat = () => {
   const user = 2
+  const [msgList, setMsgList] = useState(messages)
 
   return (
-    <>
+    <Container
+      fluid
+      flex
+      direction="column"
+      ai="space-between"
+      bgc={'#ddf'}
+      w="70%"
+      h="100vh"
+      margin="0 0 0 auto">
       <TopBar />
-      <ChatContainer>
-        {messages.map((msg) => (
-          <ChatMessage
-            key={msg.id}
-            sender={user === msg.sender}
-            content={msg.content}
-            date={msg.date}
-          />
-        ))}
-      </ChatContainer>
-      <ChatInput />
-    </>
+      <ChatContainer msg={msgList} user={user} />
+      <ChatInput func={setMsgList} list={msgList}/>
+    </Container>
   )
 }
 
