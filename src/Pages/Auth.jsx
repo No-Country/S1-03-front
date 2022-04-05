@@ -4,7 +4,7 @@ import ModalContainer from '../Components/ModalContainer'
 
 const Auth = () => {
   return (
-    <Container fluid fullHeight flex centered>
+    <Container fluid h="100vh" flex centered>
       <ModalContainer>asd</ModalContainer>
     </Container>
   )
