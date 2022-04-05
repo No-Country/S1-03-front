@@ -7,6 +7,7 @@ import Home from '../Pages/Home'
 import NotFound from '../Pages/NotFound'
 import GlobalStyles from '../Utils/globalStyles'
 import PrivateRoute from '../Utils/PrivateRoute'
+import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
   return (
