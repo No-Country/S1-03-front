@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import propTypes from 'prop-types'
 import {
   MdSend,
   MdAttachFile,
   MdOutlineSentimentSatisfied,
   MdOutlinePhoto
 } from 'react-icons/md'
-import { messages } from '../../Utils/chatData'
 
 const ChatForm = styled.form`
   display: flex;
@@ -30,7 +30,7 @@ const ChatButton = styled.button`
     color: ${(props) => props.theme.text};
   }
 `
-const Input = styled.textarea`
+const Input = styled.input`
   width: 100%;
   max-width: 100%;
   border: none;
@@ -41,12 +41,27 @@ const Input = styled.textarea`
   resize: none;
 `
 
-const ChatInput = () => {
+const ChatInput = ({ func, list = [] }) => {
+  const [inputValue, setInputValue] = useState('')
+
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    alert(JSON.stringify(messages, null, 2))
+
+    const a = {
+      id: `id-${Date.now()}`,
+      date: new Date().toLocaleDateString(),
+      sender: 2,
+      content: inputValue
+    }
+
+    const newList = [...list, a]
+    func(newList)
+    setInputValue('')
   }
 
+  const onChange = (evt) => {
+    setInputValue(evt.target.value)
+  }
   return (
     <ChatForm onSubmit={handleSubmit}>
       <ChatButton type="button">
@@ -58,11 +73,21 @@ const ChatInput = () => {
       <ChatButton type="button">
         <MdAttachFile />
       </ChatButton>
-      <Input placeholder="Type a message"></Input>
-      <ChatButton type="submit">
+      <Input
+        placeholder="Type a message"
+        value={inputValue}
+        onChange={onChange}
+      />
+      <ChatButton type="submit" disabled={!inputValue}>
         <MdSend />
       </ChatButton>
     </ChatForm>
   )
 }
+
+ChatInput.propTypes = {
+  func: propTypes.func,
+  list: propTypes.array
+}
+
 export default ChatInput
