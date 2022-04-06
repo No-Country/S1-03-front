@@ -13,11 +13,11 @@ const Home = () => {
           <div className="col-lg-6 bg-light rounded-end" id="two">
             <div className="row" id='login-content'>
               <div className="col">
-                <h4 class="">Sign In</h4>
+                <h1 class="text-center title-login">Sign In</h1>
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
+                  <span class="input-group-text span-color-login" id="basic-addon1">
                     {' '}
-                    <Icon icon="bi:person-fill" />
+                    <Icon icon="bi:person-fill" color='white' />
                   </span>
                   <input
                     type="email"
@@ -29,9 +29,9 @@ const Home = () => {
                 </div>
 
                 <div class="input-group mb-3">
-                  <span class="input-group-text" id="basic-addon1">
+                  <span class="input-group-text span-color-login" id="basic-addon1">
                     {' '}
-                    <Icon icon="akar-icons:eye" />
+                    <Icon icon="akar-icons:eye" color='white' />
                   </span>
                   <input
                     type="password"
@@ -47,9 +47,19 @@ const Home = () => {
                Remember me
                 </label>
               </div>
-              <div>
-              <a href="#">Forget your password?</a>
-              <button class="btn btn-primary mx-5" type="submit">Login</button>
+              <div class="row my-5">
+                <div className="col">
+              <a href="#" class="text-decoration-none text-color-anchor">Forget your password?</a>
+
+                </div>
+                <div className="col-lg-5 ms-5 ps-5">
+              <button class="btn-primary mx-5" type="submit" id='btn-login'>Login</button>
+                  
+                  </div>
+              </div>
+              <div class="my-5 text-center">
+              <a href="#" class="text-decoration-none text-black">No account? </a>
+              <a href="#" class="text-decoration-none text-color-anchor">Sign up</a>
               </div>
               </div>
             </div>
