@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layout from '../Components/Layout'
 
 import Providers from '../context'
 import Auth from '../Pages/Auth'
@@ -16,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes path="/">
           <Route element={<Home />} />
-          <Route index element={<PrivateRoute component={<Home />} />} />
+          <Route index element={<PrivateRoute component={<Layout> <Home /> </Layout>}/>}/>
           <Route path="auth" element={<Auth />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
