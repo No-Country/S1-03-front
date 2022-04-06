@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Icon } from '@iconify/react'
 import propTypes from 'prop-types'
-import {
-  MdSend,
-  MdAttachFile,
-  MdOutlineSentimentSatisfied,
-  MdOutlinePhoto
-} from 'react-icons/md'
 
 const ChatForm = styled.form`
   display: flex;
@@ -65,13 +60,13 @@ const ChatInput = ({ func, list = [] }) => {
   return (
     <ChatForm onSubmit={handleSubmit}>
       <ChatButton type="button">
-        <MdOutlineSentimentSatisfied />
+        <Icon icon="mdi:emoticon-happy-outline" />
       </ChatButton>
       <ChatButton type="button">
-        <MdOutlinePhoto />
+        <Icon icon="mdi:image-outline" />
       </ChatButton>
       <ChatButton type="button">
-        <MdAttachFile />
+        <Icon icon="mdi:paperclip" />
       </ChatButton>
       <Input
         placeholder="Type a message"
@@ -79,7 +74,7 @@ const ChatInput = ({ func, list = [] }) => {
         onChange={onChange}
       />
       <ChatButton type="submit" disabled={!inputValue}>
-        <MdSend />
+        <Icon icon="mdi:send" />
       </ChatButton>
     </ChatForm>
   )
