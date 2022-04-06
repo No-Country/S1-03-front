@@ -1,7 +1,8 @@
 import React from 'react'
+import Chat from '../Components/Chat/'
 
 const Home = () => {
-  return <>Home</>
+  return <Chat />
 }
 
 export default Home

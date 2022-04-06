@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { palette } from '../config/theme'
 const Auth = () => {
   return (
-    <Container fullHeight flex fluid centered>
+    <Container h="100vh" flex fluid centered>
       <AuthContainer>
         <FormContainer>
           <Title>Sign Up</Title>

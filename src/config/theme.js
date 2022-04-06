@@ -19,23 +19,28 @@ export const palette = {
   lightBluedWhite: '#ECF0F1',
   bluedDark: '#192022',
   white: '#FCFCFC',
-  red: '#FF7354'
+  red: '#FF7354',
+  yellowedGray: '#F5F2D8'
 }
 
 export const theme = {
   dark: {
+    white: palette.white,
     background: palette.bluedDark,
     modalBg: palette.dark,
     primary: palette.blue,
     secondary: palette.green
   },
   light: {
+    text: palette.dark,
+    white: palette.white,
     background: palette.lightBluedWhite,
     modalBg: palette.white,
     primary: palette.green,
     secondary: palette.blue,
     inputBg: palette.lighterGray,
-    inputPlaceholder: palette.lightGray
+    inputPlaceholder: palette.lightGray,
+    sidebarBg: palette.yellowedGray
   },
   fonts: ['Poppins', 'sans-serif']
 }
