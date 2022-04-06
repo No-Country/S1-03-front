@@ -19,7 +19,8 @@ export const palette = {
   lightBluedWhite: '#ECF0F1',
   bluedDark: '#192022',
   white: '#FCFCFC',
-  red: '#FF7354'
+  red: '#FF7354',
+  yellowedGray: '#F5F2D8'
 }
 
 export const theme = {
@@ -38,7 +39,8 @@ export const theme = {
     primary: palette.green,
     secondary: palette.blue,
     inputBg: palette.lighterGray,
-    inputPlaceholder: palette.lightGray
+    inputPlaceholder: palette.lightGray,
+    sidebarBg: palette.yellowedGray
   },
   fonts: ['Poppins', 'sans-serif']
 }
