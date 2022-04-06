@@ -18,6 +18,7 @@ const Container = styled.div`
   ${props => props.pos && props.bottom && css`bottom: ${props.bottom};`}
   ${props => props.pos && props.left && css`left: ${props.left};`}
   ${props => props.pos && props.right && css`right: ${props.right};`}
+  ${props => props.pos && props.z && css`z-index: ${props.z};`}
   /* Flex options*/
   ${props => props.flex && css`display: flex;`}
   ${props => props.flex && props.jc && css`justify-content: ${props.jc};`}
