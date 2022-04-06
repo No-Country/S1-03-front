@@ -8,7 +8,7 @@ const Form = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
   return (
     <>
-        <form onSubmit={handleSubmit((data) => {
+        <FormContainer onSubmit={handleSubmit((data) => {
           console.log(data)
         })}>
 
@@ -57,7 +57,7 @@ const Form = () => {
 
           {errors.password && <Errors> {errors.password.message}</Errors>}
           <InputContainer>
-            <Icon icon="ri:lock-password-fill" />
+            <Icon icon="charm:eye" />
             <FormInput placeholder="Password" type='password' autoComplete="off"
               {...register('password',
                 {
@@ -70,16 +70,24 @@ const Form = () => {
               />
           </InputContainer>
 
-          <FormButton type="submit"/>
-        </form>
+          <FormButton type="submit" value="Register"/>
+        </FormContainer>
     </>
   )
 }
 
+const FormContainer = styled.form`
+  width: 100%;
+`
+
 const InputContainer = styled.div`
   display: flex;
-  & > div {
+  vertical-align: middle;
+  & > svg {
     background-color: ${palette.blue};
+    font-size: 2.5rem;
+    padding: 6px;
+    color: ${palette.white}
   }
 `
 
@@ -88,18 +96,36 @@ const FormInput = styled.input`
   margin-bottom: 10px;
   display: block;
   padding: 10px;
+  outline: none;
+  border: none;
+  background: ${props => props.theme.inputBg};
+  transition: box-shadow .2s;
+  &::placeholder {
+    color: ${props => props.theme.inputPlaceholder};
+  }
+  &:focus {
+    box-shadow: inset 0px -1px 1px 0px ${palette.blue};
+  }
 `
 const FormButton = styled.input`
   background-color: ${palette.blue};
   color: ${palette.white};
   padding: 10px 25px;
-  width: 20%;
+  text-align: center;
   border: none;
+  float: right;
+  transition: background-color .2s;
+  cursor: pointer;
+  &:hover {
+    background-color: ${palette.green};
+  }
 `
 
 const Errors = styled.span`
+  display: block;
   color: ${palette.red};
   font-size: 0.7rem;
+
 `
 
 export default Form
