@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import React from 'react'
 import styled, { css } from 'styled-components'
 
@@ -58,6 +59,11 @@ const BurgerButton = ({ active, click }) => {
       active={active}
     />
   )
+}
+
+BurgerButton.propTypes = {
+  active: propTypes.bool,
+  click: propTypes.func
 }
 
 export default BurgerButton
