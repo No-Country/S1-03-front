@@ -21,7 +21,8 @@ const Navbar = () => {
       gap="2rem"
       p="1rem 0"
       pos="relative"
-      z="100">
+      z="900"
+      >
       <UserImg src={img} rounded />
       <Button active>
         <Icon icon="bi:chat-right" />
