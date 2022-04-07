@@ -1,5 +1,6 @@
 import propTypes from 'prop-types'
 import styled, { css } from 'styled-components'
+import { breakpoints } from '../config/theme'
 
 // prettier-ignore
 const Container = styled.div`
@@ -31,6 +32,14 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
   `}
+  @media screen and (max-width: ${breakpoints.mobile}px) {
+    ${props => props.s_h && css`height: ${props.s_h};`}
+    ${props => props.s_w && css`width: ${props.s_w};`}
+  }
+  @media screen and (max-width: ${breakpoints.tablet}px) {
+    ${props => props.md_h && css`height: ${props.md_h};`}
+    ${props => props.md_w && css`width: ${props.md_w};`}
+  }
 `
 Container.propTypes = {
   fluid: propTypes.bool,
