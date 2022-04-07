@@ -5,6 +5,7 @@ import { breakpoints } from '../../config/theme'
 const MessageBalloon = styled.div`
   position: relative;
   margin-bottom: 2rem;
+  z-index: 10;
   ${(props) =>
     props.sender
       ? css`
