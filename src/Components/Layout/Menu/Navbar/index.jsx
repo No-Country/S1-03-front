@@ -20,9 +20,9 @@ const Navbar = () => {
       ai="center"
       gap="2rem"
       p="1rem 0"
+      md_p="4rem 0"
       pos="relative"
-      z="900"
-      >
+      z="900">
       <UserImg src={img} rounded />
       <Button active>
         <Icon icon="bi:chat-right" />
