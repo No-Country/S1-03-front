@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../Components/Container'
-import Form from '../Components/Form'
+import Register from '../Components/Forms/Register'
 import { default as LogoSvg } from '../assets/svg/Logo.svg'
 import styled from 'styled-components'
 import { palette } from '../config/theme'
@@ -10,7 +10,7 @@ const Auth = () => {
       <AuthContainer>
         <FormContainer>
           <Title>Sign Up</Title>
-          <Form></Form>
+          <Register></Register>
         </FormContainer>
         <LogoContainer>
           <img src={LogoSvg}/>
