@@ -11,7 +11,17 @@ const Form = () => {
         <FormContainer onSubmit={handleSubmit((data) => {
           console.log(data)
         })}>
-
+          {errors.firstName && <Errors> {errors.firstName.message}</Errors>}
+          <FormInput placeholder="First Name" autoComplete="on"
+            {...register('firstName',
+              {
+                required: 'Name is required',
+                maxLength: {
+                  value: 20,
+                  message: 'The name is too long'
+                }
+              })}
+            />
 
           {errors.lastName && <Errors> {errors.lastName.message}</Errors>}
           <FormInput placeholder="Last Name" autoComplete="on"
@@ -25,7 +35,7 @@ const Form = () => {
               })}
             />
 
-
+          {errors.email && <Errors> {errors.email.message}</Errors>}
           <InputContainer>
             <Icon icon="mdi:account" />
             <FormInput placeholder="Email" autoComplete="off"
@@ -44,8 +54,19 @@ const Form = () => {
               />
           </InputContainer>
 
+          {errors.password && <Errors> {errors.password.message}</Errors>}
           <InputContainer>
             <Icon icon="charm:eye" />
+            <FormInput placeholder="Password" type='password' autoComplete="off"
+            {...register('password',
+              {
+                required: 'password is required',
+                minLength: {
+                  value: 10,
+                  message: 'the pasword must be at least 10 characters'
+                }
+              })}
+            />
           </InputContainer>
 
           <FormButton type="submit" value="Register"/>
