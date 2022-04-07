@@ -40,6 +40,7 @@ const Container = styled.div`
   @media screen and (max-width: ${breakpoints.tablet}px) {
     ${props => props.md_h && css`height: ${props.md_h};`}
     ${props => props.md_w && css`width: ${props.md_w};`}
+    ${props => props.md_p && css`padding: ${props.md_p};`}
   }
 `
 Container.propTypes = {
