@@ -11,6 +11,7 @@ const Container = styled.div`
   ${props => props.h && css`height: ${props.h};`}
   max-width: ${props => (props.fluid ? '100%' : '90%')};
   ${props => props.mh && css`max-height: ${props.mh};`}
+  ${props => props.mw && css`max-width: ${props.mw};`}
   margin: ${props => props.margin || '0 auto'};
   ${props => props.p && css`padding: ${props.p};`}
   /* Position options */
