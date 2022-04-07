@@ -1,15 +1,13 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Navbar from './Menu/Navbar'
-import Sidebar from './Menu/Sidebar'
+import Menu from './Menu'
 import Container from '../Container'
 
 const Layout = ({ children }) => {
   return (
     <>
       <Container fluid flex>
-        <Navbar />
-        <Sidebar />
+        <Menu />
         <Container
           fluid
           flex
