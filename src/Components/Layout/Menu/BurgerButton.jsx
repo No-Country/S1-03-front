@@ -7,7 +7,7 @@ import { breakpoints } from '../../../config/theme'
 const Button = styled.button`
   position: fixed;
   display: block;
-  top: 0.5rem;
+  top: 1rem;
   left: 1.5rem;
   width: 2rem;
   height: 2rem;
@@ -23,7 +23,7 @@ const Button = styled.button`
     height: 4px;
     background-color: #fff;
     position: absolute;
-    transition: transform 0.2s;
+    transition: transform 0.5s;
   }
   &::before {
     top: 0.5rem;
