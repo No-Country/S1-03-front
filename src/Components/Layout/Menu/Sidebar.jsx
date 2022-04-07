@@ -6,11 +6,12 @@ import Container from '../../Container'
 
 const Bar = styled.div`
   background-color: ${(props) => props.theme.sidebarBg};
-  width: 22rem;
   height: 100vh;
-  box-shadow: 6px 9px 13px 0px #00000040;
-  position: relative;
+  width: auto;
+  box-shadow: 2px 0px 9px 0px #00000040;
   padding: 1rem 0.5rem;
+  position: relative;
+  z-index: 890;
   border-radius: 0 1rem 1rem 0;
 `
 
@@ -23,7 +24,7 @@ const Sidebar = ({ children }) => {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="${primary}",endColorstr="#09097900",GradientType=1)`
 
   return (
-    <Container fluid bgc={bggGrad} w="22rem">
+    <Container bgc={bggGrad}>
       <Bar>{children}</Bar>
     </Container>
   )
