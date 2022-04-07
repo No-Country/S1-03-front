@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 import styled, { useTheme } from 'styled-components'
 
-import Container from '../Container'
+import Container from '../../Container'
 
 const Bar = styled.div`
   background-color: ${(props) => props.theme.sidebarBg};

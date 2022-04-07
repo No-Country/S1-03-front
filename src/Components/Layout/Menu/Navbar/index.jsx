@@ -2,8 +2,8 @@ import React from 'react'
 import { useTheme } from 'styled-components'
 import { Icon } from '@iconify/react'
 
-import Container from '../../Container'
-import UserImg from '../../UserImg'
+import Container from '../../../Container'
+import UserImg from '../../../UserImg'
 import Button from './Button'
 
 const Navbar = () => {
