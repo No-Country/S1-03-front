@@ -22,15 +22,15 @@ const Auth = () => {
             </LogoContainer>
           </AuthContainer>
           : <AuthContainer>
+              <LogoContainer>
+                <img src={LogoSvg}/>
+                <h2> Messenger 2022</h2>
+              </LogoContainer>
               <FormContainer>
                 <Title>Sign In</Title>
                 <Login></Login>
                 <p>You dont have an account? <Link onClick={() => setLogin(true)}>Sign Up </Link></p>
               </FormContainer>
-              <LogoContainer>
-                <img src={LogoSvg}/>
-                <h2> Messenger 2022</h2>
-              </LogoContainer>
           </AuthContainer>
         }
     </Container>
