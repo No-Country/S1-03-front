@@ -52,3 +52,15 @@ export const Errors = styled.span`
   font-size: 0.7rem;
 
 `
+
+export const FormCheckBox = styled.input.attrs({ type: "checkbox" })`
+  margin-bottom: 10px;
+  padding: 10px;
+  &:label{
+    margin-left: 10px;
+  }
+`
+
+export const FormDiv = styled.div`
+ display: revert;
+`
