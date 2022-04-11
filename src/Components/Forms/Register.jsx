@@ -2,13 +2,17 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Icon } from '@iconify/react'
 import { FormContainer, InputContainer, FormInput, FormButton, Errors } from './FormStyles'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
+  const navigate = useNavigate()
+
   return (
     <>
         <FormContainer onSubmit={handleSubmit((data) => {
           console.log(data)
+          navigate('/')
         })}>
           {errors.firstName && <Errors> {errors.firstName.message}</Errors>}
           <FormInput placeholder="First Name" autoComplete="on"
