@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { Icon } from '@iconify/react'
 import propTypes from 'prop-types'
 
+import ChatButton from './Input/Button'
+
 const ChatForm = styled.form`
   display: flex;
   height: 4rem;
@@ -12,19 +14,7 @@ const ChatForm = styled.form`
   align-items: center;
   margin: 1rem;
 `
-const ChatButton = styled.button`
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: transparent;
-  color: ${(props) => props.theme.inputPlaceholder};
-  &:hover {
-    cursor: pointer;
-    color: ${(props) => props.theme.text};
-  }
-`
+
 const Input = styled.input`
   width: 100%;
   max-width: 100%;
