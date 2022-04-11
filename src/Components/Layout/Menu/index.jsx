@@ -8,7 +8,7 @@ import BurgerButton from './BurgerButton'
 
 const MenuContainer = styled.div`
   display: flex;
-  width: 400px;
+  width: 550px;
   @media screen and (max-width: ${breakpoints.tablet}px) {
     max-width: 90vw;
     height: 100vh;
