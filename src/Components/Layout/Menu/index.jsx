@@ -26,7 +26,7 @@ const MenuContainer = styled.div`
 `
 
 const Menu = () => {
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
 
   return (
     <MenuContainer active={active}>
