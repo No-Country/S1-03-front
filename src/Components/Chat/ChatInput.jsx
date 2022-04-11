@@ -4,16 +4,7 @@ import { Icon } from '@iconify/react'
 import propTypes from 'prop-types'
 
 import ChatButton from './Input/Button'
-
-const ChatForm = styled.form`
-  display: flex;
-  height: 4rem;
-  background-color: ${(props) => props.theme.white};
-  padding: 0.5rem;
-  gap: 0.5rem;
-  align-items: center;
-  margin: 1rem;
-`
+import ChatForm from './Input/Form'
 
 const Input = styled.input`
   width: 100%;
