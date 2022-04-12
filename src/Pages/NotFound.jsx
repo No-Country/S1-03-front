@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { palette } from '../config/theme'
 const NotFound = () => {
   return (
-    <Container fullHeight fluid flex centered>
+    <Container h='100vh' fluid flex centered>
       <ErrorContainer>
         <Title> ERROR 404 </Title>
         <Logo src={ErrorSvg}/>
