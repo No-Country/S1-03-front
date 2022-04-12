@@ -3,7 +3,7 @@ import Container from '../Components/Container'
 import Register from '../Components/Forms/Register'
 import { default as LogoSvg } from '../assets/svg/Logo.svg'
 import styled from 'styled-components'
-import { palette } from '../config/theme'
+import { palette, breakpoints } from '../config/theme'
 import Login from '../Components/Forms/Login'
 import { useSpring, animated } from 'react-spring'
 const Auth = () => {
@@ -52,6 +52,7 @@ const Auth = () => {
 
 const Title = styled.h2`
   font-size: 2rem;
+  margin-bottom: 30px;
 `
 
 const AuthContainer = styled.main`
@@ -65,6 +66,12 @@ const AuthContainer = styled.main`
   & > div {
     width: 50%;
   }
+  @media screen and (max-width: ${breakpoints.tablet}px){
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    height: 100%;
+  }
 `
 
 const FormContainer = styled(animated.div)`
@@ -73,6 +80,20 @@ const FormContainer = styled(animated.div)`
   justify-content: center;
   align-items: center;
   padding: 50px 5%;
+  & > p {
+    margin-top: 30px;
+  }
+  @media screen and (max-width: ${breakpoints.tablet}px){
+    height: 70% !important;
+    width: 80% !important;
+  }
+  @media screen and (max-width: ${breakpoints.mobile}px){
+    height: 80% !important;
+    width: 100% !important;
+    & > p {
+      font-size: 0.9rem;
+    }
+  }
 `
 
 const LogoContainer = styled(animated.div)`
@@ -82,7 +103,24 @@ const LogoContainer = styled(animated.div)`
   align-items: center;
   justify-content: center;
   z-index: 1;
-  color: ${palette.white}
+  color: ${palette.white};
+  & > img {
+    width: 50%;
+  }
+  @media screen and (max-width: ${breakpoints.tablet}px){
+    width: 100% !important;
+    height: 30% !important;
+    & > h2 {
+      display: none;
+    }
+    & > img {
+      width: auto !important;
+      height: 70%;
+    }
+  }
+  @media screen and (max-width: ${breakpoints.mobile}px){
+    height: 20% !important;
+  }
 `
 
 const Link = styled.button`
