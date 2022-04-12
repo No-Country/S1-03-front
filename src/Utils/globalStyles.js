@@ -6,6 +6,8 @@ const GlobalStyles = createGlobalStyle`
    font-family: ${(props) =>
      `${props.theme.fonts[0]}, ${props.theme.fonts[1]}`};
    font-weight: 500;
+   padding: 0;
+   margin: 0;
  }
  body {
    background-color: ${(props) => props.theme.background};
