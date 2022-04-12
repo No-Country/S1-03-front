@@ -2,8 +2,8 @@ import React from 'react'
 import { useTheme } from 'styled-components'
 import { Icon } from '@iconify/react'
 
-import Container from '../../Container'
-import UserImg from '../../UserImg'
+import Container from '../../../Container'
+import UserImg from '../../../UserImg'
 import Button from './Button'
 
 const Navbar = () => {
@@ -20,8 +20,9 @@ const Navbar = () => {
       ai="center"
       gap="2rem"
       p="1rem 0"
+      md_p="4rem 0"
       pos="relative"
-      z="100">
+      z="900">
       <UserImg src={img} rounded />
       <Button active>
         <Icon icon="bi:chat-right" />

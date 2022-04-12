@@ -1,9 +1,11 @@
 import propTypes from 'prop-types'
 import styled, { css } from 'styled-components'
+import { breakpoints } from '../../config/theme'
 
 const MessageBalloon = styled.div`
   position: relative;
   margin-bottom: 2rem;
+  z-index: 10;
   ${(props) =>
     props.sender
       ? css`
@@ -17,7 +19,7 @@ const MessageBalloon = styled.div`
             display: block;
             position: absolute;
             bottom: -1.3rem;
-            font-size: .8rem;
+            font-size: 0.8rem;
             left: 1.5rem;
             color: ${props.theme.inputPlaceholder};
           }
@@ -32,11 +34,14 @@ const MessageBalloon = styled.div`
             display: block;
             position: absolute;
             bottom: -1.3rem;
-            font-size: .8rem;
+            font-size: 0.8rem;
             right: 1.5rem;
             color: ${props.theme.inputPlaceholder};
           }
         `}
+  @media screen and (max-width: ${breakpoints.tablet}px) {
+    max-width: 85%;
+  }
 `
 MessageBalloon.propTypes = {
   sender: propTypes.bool
