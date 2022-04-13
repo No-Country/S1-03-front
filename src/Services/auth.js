@@ -1,6 +1,6 @@
 class Auth {
   constructor() {
-    this.auth = false
+    this.auth = true
     this.user = {}
     this.token = ''
   }

@@ -6,13 +6,17 @@ import { emojis } from '../../Utils/emojis.json'
 // import { theme } from '../../config/theme'
 const Emoji = () => {
   const [open, setOpen] = useState(false)
+  handleClick = (e, data) => {
+    // access to e.target here
+    console.log(data)
+  }
   return (
     <>
       <ChatButton type="button" onClick={() => setOpen(!open)}>
         <Icon icon={open ? 'akar-icons:cross' : 'mdi:emoticon-happy-outline'} />
       </ChatButton>
       { open
-        ? <EmojiContainer>{ emojis.map(emoji => <EmojiButton key={emoji.order}>{emoji.emoji}</EmojiButton>) } </EmojiContainer>
+        ? <EmojiContainer>{ emojis.map(emoji => <EmojiButton key={emoji.order} onClick={((e) => this.handleClick(e, data))} >{emoji.emoji}</EmojiButton>) } </EmojiContainer>
 
         : <></>
 
