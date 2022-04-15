@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Icon } from '@iconify/react'
 import propTypes from 'prop-types'
-
+import Emoji from './Emoji'
 import ChatButton from './Input/Button'
 import ChatForm from './Input/Form'
 
@@ -40,9 +40,7 @@ const ChatInput = ({ func, list = [] }) => {
   }
   return (
     <ChatForm onSubmit={handleSubmit}>
-      <ChatButton type="button">
-        <Icon icon="mdi:emoticon-happy-outline" />
-      </ChatButton>
+      <Emoji></Emoji>
       <ChatButton type="button">
         <Icon icon="mdi:image-outline" />
       </ChatButton>
