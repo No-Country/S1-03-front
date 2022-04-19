@@ -21,16 +21,14 @@ Está enfocado a un público que quiere un sistema de mensajería  rápido sin n
 <ul><li> Styled-components</li></ul>
 <ul><li> Redux </li></ul>
 
-<h4> :point_right: Integrantes: </h4>
-<h5>Backend:</h5>
-<ul><li> Juan Ignacio, Caballero</li></ul>
-<ul><li> Oriana, Pellegrini</li></ul>
-<ul><li>Johana, Martinez </li></ul>
+<h4> :point_right: Colaboradores y Roles: </h4>
+<ul><li> Juan Ignacio, Caballero - <strong>Backend: (https://github.com/Juan-ci)</strong></li></ul>
+<ul><li> Oriana, Pellegrini - <strong>Backend: (https://github.com/Oriana10)</strong></li></ul>
+<ul><li>Johana, Martinez  - <strong>Backend: (https://github.com/JohanaMM)</strong></li></ul>
 
-<h5>Frontend:</h5>
-<ul><li> Braian, Delgado</li></ul>
-<ul><li> Martin, Meza</li></ul>
-<ul><li> Paola, Medina</li></ul>
+<ul><li> Braian, Delgado  - <strong>Fullstack: (https://github.com/Pr0vius)</strong></li></ul>
+<ul><li> Martin, Meza  - <strong>Frontend: (https://github.com/martinmeza0)</strong></li></ul>
+<ul><li> Paola, Medina - <strong>DiseñadoraWeb/Frontend: (https://github.com/paodesign)</strong></li></ul>
 
 
 
