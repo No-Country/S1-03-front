@@ -23,7 +23,7 @@ const Emoji = ({ addEmoji, currentValue }) => {
       </ChatButton>
       {open
         ? <EmojiContainer style={animation}>
-          {emojis.filter(emoji => emoji.category.startsWith('People & Body')).map(emoji => (
+          {emojis.filter(emoji => emoji.category.startsWith('Smileys & Emotion')).map(emoji => (
             <EmojiButton
               key={emoji.unicode}
               onClick={() => handleClick(emoji.emoji)}>
