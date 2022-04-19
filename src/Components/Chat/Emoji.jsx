@@ -13,29 +13,28 @@ const Emoji = ({ addEmoji, currentValue }) => {
   const handleClick = (emoji) => {
     store.dispatch(addCharacterToInput(`${currentValue}${emoji}`))
   }
-  const click = () => {
-    ;() => {
-      addEmoji((prevState) => `${prevState}${emoji.emoji}`)
-    }
-  }
+  // const click = () => {
+  //   () => {
+  //     addEmoji((prevState) => `${prevState}${emoji.emoji}`)
+  //   }
+  // }
   return (
     <>
       <ChatButton type="button" onClick={() => setOpen(!open)}>
         <Icon icon={open ? 'akar-icons:cross' : 'mdi:emoticon-happy-outline'} />
       </ChatButton>
-      {open ? (
-        <EmojiContainer>
-          {emojis.map((emoji) => (
-            <EmojiButton
-              key={emoji.unicode}
-              onClick={() => handleClick(emoji.emoji)}>
-              {emoji.emoji}
-            </EmojiButton>
+      {open
+        ? <EmojiContainer>
+          {emojis.filter(emoji => emoji.category.startsWith('People & Body')).map(emoji => (
+              <EmojiButton
+                key={emoji.unicode}
+                onClick={() => handleClick(emoji.emoji)}>
+                {emoji.emoji}
+              </EmojiButton>
           ))}
         </EmojiContainer>
-      ) : (
-        <></>
-      )}
+        : <></>
+      }
     </>
   )
 }
