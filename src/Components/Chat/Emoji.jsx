@@ -24,11 +24,11 @@ const Emoji = ({ addEmoji, currentValue }) => {
       {open
         ? <EmojiContainer style={animation}>
           {emojis.filter(emoji => emoji.category.startsWith('People & Body')).map(emoji => (
-              <EmojiButton
-                key={emoji.unicode}
-                onClick={() => handleClick(emoji.emoji)}>
-                {emoji.emoji}
-              </EmojiButton>
+            <EmojiButton
+              key={emoji.unicode}
+              onClick={() => handleClick(emoji.emoji)}>
+              {emoji.emoji}
+            </EmojiButton>
           ))}
         </EmojiContainer>
         : <></>
