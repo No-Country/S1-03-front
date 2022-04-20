@@ -3,7 +3,6 @@ import { messages } from '../../Utils/chatData'
 
 const INITIAL_STATE = {
   input: '',
-  chat: messages,
   current: '',
   initializedChats: {
     idk54845: messages
@@ -13,7 +12,15 @@ const INITIAL_STATE = {
 const chatReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SEND_MESSAGE:
-      return { ...state }
+      return {
+        ...state,
+        initializedChats: {
+          [state.current]: [
+            ...state.initializedChats[state.current],
+            action.payload.message
+          ]
+        }
+      }
     case INPUT_ADD_CHARACTER:
       return {
         ...state,
