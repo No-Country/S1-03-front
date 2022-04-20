@@ -2,18 +2,19 @@ import { React, useState } from 'react'
 import ChatButton from './Input/Button'
 import { Icon } from '@iconify/react'
 import styled from 'styled-components'
-import { emojis } from '../../Utils/emojis.json'
+import { useSelector } from 'react-redux'
 import { useSpring, animated } from 'react-spring'
-import store from '../../redux/store'
 
+import { emojis } from '../../Utils/emojis.json'
+import store from '../../redux/store'
 import { addCharacterToInput } from '../../redux/chat/actions'
 
-const Emoji = ({ addEmoji, currentValue }) => {
+const Emoji = () => {
   const [open, setOpen] = useState(false)
-
+  const value = useSelector((state) => state.chat.input)
   const animation = useSpring({ y: open ? '0' : '20%', opacity: open ? 1 : 0 })
   const handleClick = (emoji) => {
-    store.dispatch(addCharacterToInput(`${currentValue}${emoji}`))
+    store.dispatch(addCharacterToInput(`${value}${emoji}`))
   }
 
   return (
