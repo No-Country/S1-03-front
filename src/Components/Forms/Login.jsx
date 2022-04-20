@@ -63,17 +63,10 @@ const Form = () => {
             })}
           />
         </InputContainer>
-        
-       
         <FormDiv>
-          <div>
           <FormCheckBox></FormCheckBox>
           <label htmlFor="">Remember me</label>
-          </div>
-        
           <FormButton type="submit" value="Login" />
-         
-
         </FormDiv>
       </FormContainer>
     </>

@@ -53,7 +53,7 @@ export const Errors = styled.span`
 
 `
 
-export const FormCheckBox = styled.input.attrs({ type: "checkbox" })`
+export const FormCheckBox = styled.input.attrs({ type: 'checkbox' })`
   margin-bottom: 10px;
   padding: 10px;
   &:label{
