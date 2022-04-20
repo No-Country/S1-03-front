@@ -1,31 +1,13 @@
 import React from 'react'
 
 import User from './User'
+import { useSelector } from 'react-redux'
+
 import Container from '../../../Container'
+
 const FriendList = () => {
-  const friends = [
-    {
-      id: 1,
-      firstname: 'John',
-      lastname: 'Doe',
-      img: 'https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png',
-      email: 'john@doe.com'
-    },
-    {
-      id: 2,
-      firstname: 'John',
-      lastname: 'Doe',
-      img: 'https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png',
-      email: 'john@doe.com'
-    },
-    {
-      id: 3,
-      firstname: 'John',
-      lastname: 'Doe',
-      img: 'https://www.pavilionweb.com/wp-content/uploads/2017/03/man-300x300.png',
-      email: 'john@doe.com'
-    }
-  ]
+  const friends = useSelector((state) => state.friends)
+
   return (
     <>
       <h2>Friends</h2>
@@ -43,6 +25,7 @@ const FriendList = () => {
             lastname={e.lastname}
             img={e.img}
             email={e.email}
+            username={e.username}
           />
         ))}
       </Container>

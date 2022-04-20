@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import UserImg from '../../../UserImg'
 import Container from '../../../Container'
 import { breakpoints } from '../../../../config/theme'
+import store from '../../../../redux/store'
+import { openChat } from '../../../../redux/chat/actions'
 
 const MessagePreview = styled.span`
   color: ${(props) => props.theme.inputPlaceholder};
@@ -17,9 +19,12 @@ const MessagePreview = styled.span`
   }
 `
 
-const User = ({ img, firstname, lastname, message, email }) => {
+const User = ({ img, firstname, lastname, message, email, username }) => {
+  const handleClick = () => {
+    store.dispatch(openChat(username))
+  }
   return (
-    <Container fluid flex gap=".5rem">
+    <Container onClick={handleClick} fluid flex gap=".5rem">
       <UserImg rounded src={img} />
       <Container flex direction="column">
         <span>
@@ -36,6 +41,7 @@ User.propTypes = {
   firstname: propTypes.string,
   lastname: propTypes.string,
   message: propTypes.string,
-  email: propTypes.string
+  email: propTypes.string,
+  username: propTypes.string
 }
 export default User

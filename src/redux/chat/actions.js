@@ -16,3 +16,12 @@ export const addCharacterToInput = (char) => {
     }
   }
 }
+
+export const openChat = (username) => {
+  return {
+    type: chatActionTypes.OPEN_CHAT,
+    payload: {
+      username
+    }
+  }
+}

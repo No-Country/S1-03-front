@@ -6,10 +6,12 @@ import ChatContainer from './ChatContainer'
 import TopBar from './TopBar'
 import Socket from '../../Services/socketio'
 import Auth from '../../Services/auth'
+import { useSelector } from 'react-redux'
 
 const Chat = () => {
   const user = 2
   const [msgList, setMsgList] = useState(messages)
+  const chat = useSelector((state) => state.chat)
 
   const onClick = () => {
     Socket.connectQueue()
@@ -21,7 +23,7 @@ const Chat = () => {
   return (
     <>
       <TopBar />
-      <ChatContainer msg={msgList} user={user} />
+      <ChatContainer msg={chat.initializedChats[chat.current]} user={user} />
       <ChatInput func={setMsgList} list={msgList} />
       <div>
         <button onClick={onClick}>conect</button>
