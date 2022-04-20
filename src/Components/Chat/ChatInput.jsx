@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Icon } from '@iconify/react'
 import propTypes from 'prop-types'
@@ -20,7 +20,6 @@ const Input = styled.input`
 `
 
 const ChatInput = ({ func, list = [] }) => {
-  const [inputValue, setInputValue] = useState('')
   const value = useSelector((state) => state.chat.input)
 
   const handleSubmit = (evt) => {
@@ -41,7 +40,7 @@ const ChatInput = ({ func, list = [] }) => {
   }
   return (
     <ChatForm onSubmit={handleSubmit}>
-      <Emoji addEmoji={setInputValue} currentValue={value}></Emoji>
+      <Emoji></Emoji>
       <ChatButton type="button">
         <Icon icon="mdi:image-outline" />
       </ChatButton>
