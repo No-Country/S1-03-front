@@ -12,7 +12,7 @@ Está enfocado a un público que quiere un sistema de mensajería  rápido sin n
 <ul><li> Se podra editar el perfil del usuario, modificar foto, nombre y contraseña.</li></ul>
 <ul><li> Tendra la opción de elegir un tema de fondo, entre drack o light .</li></ul>
 <ul><li> El usuario podra loguearse, recordar su usuario y contraseña .</li></ul>
-<ul><li> </li></ul>
+
 
 <h4>:pushpin: Link Deploy: https://nocountry-chat.herokuapp.com/ </h4>
 
