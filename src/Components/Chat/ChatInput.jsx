@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { Icon } from '@iconify/react'
 import propTypes from 'prop-types'
+import { useSelector } from 'react-redux'
+
+import store from '../../redux/store'
+import { addCharacterToInput, sendMessage } from '../../redux/chat/actions'
 import Emoji from './Emoji'
 import ChatButton from './Input/Button'
 import ChatForm from './Input/Form'
-import { useSelector } from 'react-redux'
-import store from '../../redux/store'
-import { addCharacterToInput } from '../../redux/chat/actions'
+
 const Input = styled.input`
   width: 100%;
   max-width: 100%;
@@ -24,14 +26,7 @@ const ChatInput = ({ func, list = [] }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    const a = {
-      id: `id-${Date.now()}`,
-      date: new Date().toLocaleDateString(),
-      sender: 2,
-      content: value
-    }
-    const newList = [...list, a]
-    func(newList)
+    store.dispatch(sendMessage(value))
     store.dispatch(addCharacterToInput(''))
   }
 
