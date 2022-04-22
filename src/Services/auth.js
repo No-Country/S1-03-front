@@ -6,6 +6,21 @@ class Auth {
   }
 
   async login() {
+    const res = await fetch(
+      'https://nocountry-chat.herokuapp.com/api/auth/signin',
+      {
+        method: 'post',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          username: 'braian123',
+          password: '12345678'
+        })
+      }
+    )
+    console.log(await res.json())
+
     this.auth = true
   }
 

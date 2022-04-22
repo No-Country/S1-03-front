@@ -1,16 +1,19 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { useTheme } from 'styled-components'
 import Container from '../Container'
 import UserImg from '../UserImg'
 
 const TopBar = () => {
   const { primary } = useTheme()
-  const img =
-    'https://64.media.tumblr.com/f5ec39d6fa69304a28f5755279ea4c76/178d467c126f1716-72/s500x750/68130d0b13e9837264c583c3eedc04ac10c6fb0d.jpg'
+  const friends = useSelector((state) => state.friends)
+  const current = useSelector((state) => state.chat.current)
+  const user = friends?.filter((e) => e.username === current)[0]
+
   return (
     <Container fluid bgc={primary}>
       <Container flex h="70px" centerCross gap="1rem" md_p="0 0 0 3rem">
-        <UserImg src={img} rounded /> Firstname Lastname
+        <UserImg src={user.img} rounded /> {user.firstname} {user.lastname}
       </Container>
     </Container>
   )

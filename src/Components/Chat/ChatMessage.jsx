@@ -17,4 +17,4 @@ ChatMessage.propTypes = {
   sender: propTypes.bool
 }
 
-export default ChatMessage
+export default React.memo(ChatMessage)

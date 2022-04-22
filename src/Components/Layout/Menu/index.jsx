@@ -5,6 +5,7 @@ import { breakpoints } from '../../../config/theme'
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 import BurgerButton from './BurgerButton'
+import Chatlist from './Sidebar/Chatlist'
 
 const MenuContainer = styled.div`
   display: flex;
@@ -27,12 +28,18 @@ const MenuContainer = styled.div`
 
 const Menu = () => {
   const [active, setActive] = useState(false)
+  const [openSide, setOpenSide] = useState('chat')
 
   return (
     <MenuContainer active={active}>
       <BurgerButton active={active} click={setActive} />
-      <Navbar status={{ active, setActive }} />
-      <Sidebar />
+      <Navbar
+        status={{ active, setActive }}
+        sideBar={{ current: openSide, change: setOpenSide }}
+      />
+      <Sidebar current={openSide} change={setOpenSide}>
+        <Chatlist />
+      </Sidebar>
     </MenuContainer>
   )
 }
