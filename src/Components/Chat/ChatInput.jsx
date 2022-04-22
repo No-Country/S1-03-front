@@ -41,7 +41,7 @@ const ChatInput = ({ func, list = [] }) => {
   return (
     <ChatForm onSubmit={handleSubmit}>
       <Emoji></Emoji>
-      <ChatButton type="button">
+      <ChatButton type="file">
         <Icon icon="mdi:image-outline" />
       </ChatButton>
       <ChatButton type="button">

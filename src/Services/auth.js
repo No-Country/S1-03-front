@@ -8,13 +8,19 @@ class Auth {
     this.url = 'https://nocountry-chat.herokuapp.com'
   }
 
-  async login(user) {
+  async login(user, callback) {
     const res = await axios.post(`${this.url}/api/auth/signin`, {
       username: user.username,
       password: user.password
     })
-
-    console.log(res.data)
+    this.user = {
+      username: res.data.username,
+      email: res.data.email,
+      id: res.data.id
+    }
+    this.token = res.data.token
+    this.auth = true
+    callback && callback()
   }
 
   async register(user) {

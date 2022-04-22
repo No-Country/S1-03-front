@@ -26,8 +26,9 @@ const Form = () => {
       <FormContainer
         onSubmit={handleSubmit(async (data) => {
           console.log(data)
-          await auth.login(data)
-          // navigate('/')
+          await auth.login(data, () => {
+            navigate('/')
+          })
         })}>
         {errors.email && <Errors> {errors.email.message}</Errors>}
         <InputContainer>
