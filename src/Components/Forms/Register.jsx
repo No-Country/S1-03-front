@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Icon } from '@iconify/react'
-import { FormContainer, InputContainer, FormInput, FormButton,FormCheckBox, Errors } from './FormStyles'
+import { FormContainer, InputContainer, FormInput, FormButton, FormCheckBox, Errors } from './FormStyles'
 import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
@@ -74,7 +74,7 @@ const Register = () => {
 
           <FormButton type="submit" value="Register"/>
         </FormContainer>
-      
+
     </>
   )
 }
