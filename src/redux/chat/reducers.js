@@ -31,6 +31,7 @@ const chatReducer = (state = INITIAL_STATE, action) => {
         ...state,
         current: action.payload.username,
         initializedChats: {
+          ...state.initializedChats,
           [action.payload.username]:
             state.initializedChats[action.payload.username] || []
         }
