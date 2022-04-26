@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Icon } from '@iconify/react'
 import {
@@ -15,6 +15,7 @@ import { useNavigate } from 'react-router-dom'
 import auth from '../../Services/auth'
 
 const Form = () => {
+  const [error, setError] = useState(false)
   const {
     register,
     handleSubmit,
@@ -32,8 +33,10 @@ const Form = () => {
             })
           } catch (e) {
             console.log(e)
+            setError(true)
           }
         })}>
+        {error && <Errors> the user or password is incorrect</Errors>}
         {errors.username && <Errors> {errors.username.message}</Errors>}
         <InputContainer>
           <Icon icon="mdi:account" />
