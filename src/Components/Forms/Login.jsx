@@ -25,28 +25,23 @@ const Form = () => {
     <>
       <FormContainer
         onSubmit={handleSubmit(async (data) => {
-          console.log(data)
-          await auth.login(data, () => {
-            navigate('/')
-          })
+          try {
+            console.log(data)
+            await auth.login(data, () => {
+              navigate('/')
+            })
+          } catch (e) {
+            console.log(e)
+          }
         })}>
-        {errors.email && <Errors> {errors.email.message}</Errors>}
+        {errors.username && <Errors> {errors.username.message}</Errors>}
         <InputContainer>
           <Icon icon="mdi:account" />
           <FormInput
             placeholder="Username"
             autoComplete="off"
             {...register('username', {
-              required: 'Enter the email',
-              minLength: {
-                value: 1,
-                message: 'The email is too short'
-              }
-              // pattern: {
-              //   value:
-              //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              //   message: 'Please enter a valid email'
-              // }
+              required: 'Enter the username'
             })}
           />
         </InputContainer>
@@ -61,7 +56,7 @@ const Form = () => {
             {...register('password', {
               required: 'password is required',
               minLength: {
-                value: 5,
+                value: 10,
                 message: 'the pasword must be at least 10 characters'
               }
             })}

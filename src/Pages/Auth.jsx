@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-default */
 import React, { useState } from 'react'
 import Container from '../Components/Container'
 import Register from '../Components/Forms/Register'
