@@ -1,19 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Icon } from '@iconify/react'
-import { FormContainer, InputContainer, FormInput, FormButton, FormCheckBox, Errors } from './FormStyles'
+import { FormContainer, InputContainer, FormInput, FormButton, Errors } from './FormStyles'
 import { useNavigate } from 'react-router-dom'
+import auth from '../../Services/auth'
 
 const Register = () => {
+  const [error, setError] = useState(false)
   const { register, handleSubmit, formState: { errors } } = useForm()
   const navigate = useNavigate()
 
   return (
     <>
-        <FormContainer onSubmit={handleSubmit((data) => {
-          console.log(data)
-          navigate('/')
+        <FormContainer onSubmit={handleSubmit(async (data) => {
+          try {
+            console.log(data)
+            await auth.register(data, () => {
+              navigate('/')
+            })
+          } catch (e) {
+            console.log(e.response)
+            setError(true)
+          }
         })}>
+          {error && <Errors> The user or password is incorrect</Errors>}
+          {errors.username && <Errors> {errors.username.message}</Errors>}
+          <FormInput placeholder="Username" autoComplete="on"
+            {...register('username',
+              {
+                required: 'Username is required',
+                maxLength: {
+                  value: 20,
+                  message: 'The username is too long'
+                }
+              })}
+            />
           {errors.firstName && <Errors> {errors.firstName.message}</Errors>}
           <FormInput placeholder="First Name" autoComplete="on"
             {...register('firstName',

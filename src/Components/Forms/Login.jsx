@@ -36,7 +36,7 @@ const Form = () => {
             setError(true)
           }
         })}>
-        {error && <Errors> the user or password is incorrect</Errors>}
+        {error && <Errors> The user or password is incorrect</Errors>}
         {errors.username && <Errors> {errors.username.message}</Errors>}
         <InputContainer>
           <Icon icon="mdi:account" />
@@ -59,7 +59,7 @@ const Form = () => {
             {...register('password', {
               required: 'password is required',
               minLength: {
-                value: 10,
+                value: 8,
                 message: 'the pasword must be at least 10 characters'
               }
             })}
