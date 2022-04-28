@@ -6,12 +6,12 @@
 Está enfocado a un público que quiere un sistema de mensajería  rápido sin necesidad de descargar aplicaciones externas, manteniendo  la simplicidad y la esencia de aquella versión mítica del 2008.
 
 <h4>:mag_right: Funcionalidad: </h4>
-<ul><li> Una vez registrado podra usar la aplicación web para comunicarce por medio de mensajes con sus amigos ya registrados.</li></ul>
-<ul><li> Podra agregar y eliminar amigos.</li></ul>
-<ul><li> Desde la aplicación podra el usuario enviar mensajes, emoticones, fotos y compartir archivos.</li></ul>
-<ul><li> Se podra editar el perfil del usuario, modificar foto, nombre y contraseña.</li></ul>
-<ul><li> Tendra la opción de elegir un tema de fondo, entre drack o light .</li></ul>
-<ul><li> El usuario podra loguearse, recordar su usuario y contraseña .</li></ul>
+<ul><li> Una vez registrado podrá usar la aplicación web para comunicarse por medio de mensajes con sus amigos ya registrados.</li></ul>
+<ul><li> Podrá agregar y eliminar amigos.</li></ul>
+<ul><li> Desde la aplicación podrá el usuario enviar mensajes, emoticones, fotos y compartir archivos.</li></ul>
+<ul><li> Se podrá editar el perfil del usuario, modificar foto, nombre y contraseña.</li></ul>
+<ul><li> Tendrá la opción de elegir un tema de fondo, entre dark o light .</li></ul>
+<ul><li> El usuario podrá loguearse, recordar su usuario y contraseña .</li></ul>
 
 
 <h4>:pushpin: Deploy Backend: https://nocountry-chat.herokuapp.com/ </h4>
@@ -42,7 +42,6 @@ Está enfocado a un público que quiere un sistema de mensajería  rápido sin n
 <ul><li> Martin, Meza  - <strong>Frontend: (https://github.com/martinmeza0)</strong></li></ul>
 <ul><li> Paola, Medina - <strong>DiseñadoraWeb/Frontend: (https://github.com/paodesign)</strong></li></ul>
 <ul><li> Dayana, Centorbi - <strong>Diseño Ux/Ui</strong></li></ul>
-
 
 
 
